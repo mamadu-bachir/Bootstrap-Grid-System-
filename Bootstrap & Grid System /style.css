@@ -1,0 +1,167 @@
+/* --- Variables de couleurs --- */
+:root {
+    --primary-color: #198754;
+    /* Vert (sénégalais) */
+    --accent-color: #ffc107;
+    /* Jaune (or) */
+    --dark-color: #212529;
+    /* Gris très foncé */
+}
+
+/* --- Styles globaux --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding-top: 56px;
+    /* Ajustement pour la navbar fixed-top */
+}
+
+/* --- Section Héros --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images /hero.jpg') no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.btn-custom {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #146c43;
+    color: white;
+}
+
+/* --- Section Menu --- */
+#menu {
+    padding: 80px 0;
+}
+
+/* Correction pour l'alignement des images des cartes */
+.card-img-top {
+    height: 200px;
+    /* Fixe la hauteur */
+    object-fit: cover;
+    /* Évite que l'image ne soit déformée */
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: var(--dark-color) !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--accent-color) !important;
+}
+
+/* --- Footer (Optionnel) --- */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+img {
+    height: 80%;
+    width: 200px;
+}
+
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Police générale du site */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Grand titre du Hero */
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: #fff;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Texte d'introduction */
+.hero p {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.8;
+    color: #f5f5f5;
+}
+
+/* Petit texte au-dessus du titre */
+.hero .subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5b942;
+}
+
+/* Bouton du Hero */
+.hero .btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #f5f5f5;
+}
+
+/* Nom du restaurant */
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #f5b942 !important;
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+.card {
+    height: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+#apropos img {
+    width: 100%;
+    height: 380px; 
+    object-fit: cover; 
+    display : block;
+    border-radius: 15px;
+}
+@media (max-width: 767px) {
+    #apropos img {
+        height: 280px;
+    }
+}
