@@ -1,296 +1,243 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Teranga - Saveurs & Authenticité Sénégalaises</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Teranga - Saveurs du Sénégal</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usKNU8gohwsnwqprMnhsNkWQdP7J5ZVHSpzAlp6K7AkzFBFs2yBcuNvMaNshare="
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+  <!-- Fichier CSS personnalisé -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!--SECTION EN-TÊTE-->
-    <section>
-        <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">Le Teranga</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#accueil">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#menu">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#apropos">À propos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </section>
 
-    <!--SECTION HÉRO-->
+  <!-- 1. SECTION EN-TÊTE (NAVBAR) -->
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <div class="container-fluid">
+        <!-- Nom du restaurant à gauche -->
+        <a class="navbar-brand fw-bold fs-3 text-brand" href="#">
+          <i class="bi bi-fire me-2 text-accent"></i>Le Teranga
+        </a>
+        
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <header id="accueil" class="hero">
-        <div class="container">
-            <h1 class="display-3 fw-bold mb-4">Bienvenue au Teranga: L’excellence de la cuisine sénégalaise dans votre
-                assiette.</h1>
-            <p class="lead mb-4">Plongez au cœur de la gastronomie Sénégalaise et vivez une expérience culinaire
-                inoubliable, unique, rythmée par la générosité et l’authentique hospitalité de notre teranga. De notre
-                incontournable Thiéboudienne aux saveurs enivrantes de nos épices locales, chaque plats est une
-                invitation au voyage et au partage</p>
-            <a href="#menu" class="btn btn-custom btn-lg">Réserver une table</a>
+        <!-- Liens de navigation à droite -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto fw-semibold">
+            <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
         </div>
-    </header>
-    <!--SECTION MENU-->
-    <section id="menu" class="container py-5">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Notre Menu Du Jour</h2>
-            <p class="text-muted"> Des plats authentiques préparés avec passion et les meilleurs ingrédients du Sénégal.
+      </div>
+    </nav>
+  </header>
+
+  <!-- 2. SECTION HÉROS -->
+  <section class="hero-section d-flex align-items-center justify-content-center text-center text-white" id="accueil">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <div class="hero-content p-4 p-md-5 rounded-4">
+            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3 fw-bold text-uppercase">
+              L'Art de l'Hospitalité
+            </span>
+            <h1 class="display-3 fw-bold mb-3 brand-font">Bienvenue chez Le Teranga</h1>
+            <p class="lead mb-4 text-light">
+              Découvrez la richesse et l'authenticité de la cuisine sénégalaise à travers des plats préparés avec passion et tradition.
             </p>
+            <a href="#menu" class="btn btn-accent btn-lg rounded-pill px-4 py-3 fw-bold shadow">
+              <i class="bi bi-restaurant me-2"></i>Découvrir notre Menu
+            </a>
+          </div>
         </div>
-        <div class="row g-4">
+      </div>
+    </div>
+  </section>
 
-            <!-- CARTE 1 -->
-            <div class="col-12 col-md-4">
-                <div class="card h-100 shadow-sm border-0">
+  <!-- 3. SECTION MENU (DISPOSITION EN GRILLE) -->
+  <section class="py-5 bg-light" id="menu">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="display-6 fw-bold brand-font text-brand">Notre Menu Traditionnel</h2> 
+        </h2>
+        <p class="text-muted">Des recettes ancestrales mijotées avec des ingrédients frais et locaux</p>
+      </div>
 
-                    <img src="images /Yassa.jpg" class="card-img-top" alt="Yassa Poulet">
-
-                    <div class="card-body d-flex flex-column">
-
-                        <h5 class="card-title">Yassa Poulet</h5>
-
-                        <p class="card-text">
-                            Poulet mariné longuement au citron et aux oignons
-                            caramélisés, mijoté aux épices douces et locales.
-                        </p>
-
-                        <div class="mt-auto pt-3">
-                            <span class="text-success fw-bold fs-5">
-                                3 000 CFA
-                            </span>
-
-                            <a href="#contact" class="btn btn-outline-dark btn-sm ms-2">
-                                Commander
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
+      <div class="row g-4">
+        <!-- Plat 1 : Thiéboudienne -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm custom-card">
+            <div class="position-relative">
+              <img src="images /Thiéboudienne.jpg" class="card-img-top" alt="Thiéboudienne">
+              <span class="badge bg-danger position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">Spécialité</span>
             </div>
-
-
-            <!-- CARTE 2 -->
-            <div class="col-12 col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-
-                    <img src="images /Mafé.jpg" class="card-img-top" alt="Mafé">
-
-                    <div class="card-body d-flex flex-column">
-
-                        <h5 class="card-title">Mafé</h5>
-
-                        <p class="card-text">
-                            Tendre viande de bœuf mijotée dans une riche et
-                            onctueuse sauce à la pâte d’arachide, accompagnée
-                            de légumes et de riz blanc.
-                        </p>
-
-                        <div class="mt-auto pt-3">
-                            <span class="text-success fw-bold fs-5">
-                                3 500 CFA
-                            </span>
-
-                            <a href="#contact" class="btn btn-outline-dark btn-sm ms-2">
-                                Commander
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
+            <div class="card-body d-flex flex-column p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title fw-bold brand-font mb-0">Thiéboudienne</h5>
+                <span class="badge bg-brand-subtle text-brand fs-6 fw-bold">6 000 FCFA</span>
+              </div>
+              <p class="card-text text-muted flex-grow-1">
+                Le plat national par excellence : riz au gras mijoté dans une sauce tomate savoureuse, servi avec du poisson frais, légume et roff.
+              </p>
             </div>
-
-
-            <!-- CARTE 3 -->
-            <div class="col-12 col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-
-                    <img src="images /Thiéboudienne.jpg" class="card-img-top" alt="Thiéboudienne">
-
-                    <div class="card-body d-flex flex-column">
-
-                        <h5 class="card-title">Thiéboudienne</h5>
-
-                        <p class="card-text">
-                            Plat national par excellence : riz parfumé au
-                            poisson frais, accompagné de légumes savoureux.
-                        </p>
-
-                        <div class="mt-auto pt-3">
-                            <span class="text-success fw-bold fs-5">
-                                4 000 CFA
-                            </span>
-
-                            <a href="#contact" class="btn btn-outline-dark btn-sm ms-2">
-                                Commander
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
-    </section>
-    <!-- SECTION À PROPOS -->
-    <section id="apropos" class="py-5 bg-light">
-        <div class="container">
 
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">À propos de Le Teranga</h2>
-                <p class="text-muted">
-                    Découvrez notre passion pour la cuisine sénégalaise.
-                </p>
+        <!-- Plat 2 : Yassa Poulet -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm custom-card">
+            <div class="position-relative">
+              <img src="images /Yassa.jpg" class="card-img-top" alt="Yassa Poulet">
+              <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill">Incontournable</span>
             </div>
-
-            <div class="row align-items-center g-5">
-
-                <!-- COLONNE IMAGE -->
-                <div class="col-12 col-md-6">
-                    <img src="images /àpropos.jpg" class="img-fluid w-100 rounded shadow" alt="Cuisine sénégalaise">
-                </div>
-
-                <!-- COLONNE TEXTE -->
-                <div class="col-12 col-md-6">
-                    <h3 class="fw-bold mb-3">Une cuisine, une tradition</h3>
-
-                    <p class="lead">
-                        Le Teranga vous invite à découvrir les richesses de la
-                        cuisine sénégalaise à travers des plats authentiques,
-                        généreux et préparés avec passion.
-                    </p>
-
-                    <p>
-                        De l'incontournable Thiéboudienne au savoureux Yassa
-                        Poulet, chaque recette met à l'honneur les produits
-                        locaux, les épices et le savoir-faire de notre cuisine.
-                        Notre objectif est de vous offrir une expérience
-                        chaleureuse qui célèbre la tradition et le partage.
-                    </p>
-
-                    <a href="#menu" class="btn btn-dark">
-                        Découvrir notre menu
-                    </a>
-                </div>
-
+            <div class="card-body d-flex flex-column p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title fw-bold brand-font mb-0">Yassa Poulet</h5>
+                <span class="badge bg-brand-subtle text-brand fs-6 fw-bold">5 000 FCFA</span>
+              </div>
+              <p class="card-text text-muted flex-grow-1">
+                Poulet mariné au citron vert, à la moutarde et abondamment garni d'oignons caramélisés, servi avec du riz blanc parfumé.
+              </p>
             </div>
+          </div>
         </div>
-    </section>
-    <!-- SECTION CONTACT -->
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
 
-            <!-- TITRE -->
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Contactez-nous</h2>
-                <p class="text-muted">
-                    Une question ou une réservation ? Écrivez-nous.
-                </p>
+        <!-- Plat 3 : Mafé -->
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm custom-card">
+            <div class="position-relative">
+              <img src="images /Mafé.jpg" class="card-img-top" alt="Mafé">
             </div>
-
-            <!-- FORMULAIRE -->
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-8 col-lg-6">
-
-                    <form>
-
-                        <!-- NOM -->
-                        <div class="mb-3">
-                            <label for="nom" class="form-label">
-                                Nom
-                            </label>
-                            <input type="text" class="form-control" id="nom" placeholder="Votre nom" required>
-                        </div>
-
-                        <!-- EMAIL -->
-                        <div class="mb-3">
-                            <label for="email" class="form-label">
-                                Email
-                            </label>
-                            <input type="email" class="form-control" id="email" placeholder="votre@email.com" required>
-                        </div>
-
-                        <!-- MESSAGE -->
-                        <div class="mb-3">
-                            <label for="message" class="form-label">
-                                Message
-                            </label>
-                            <textarea class="form-control" id="message" rows="5" placeholder="Votre message..."
-                                required></textarea>
-                        </div>
-
-                        <!-- BOUTON -->
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-dark px-4">
-                                Envoyer le message
-                            </button>
-                        </div>
-
-                    </form>
-
-                </div>
+            <div class="card-body d-flex flex-column p-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="card-title fw-bold brand-font mb-0">Mafé</h5>
+                <span class="badge bg-brand-subtle text-brand fs-6 fw-bold">5 500 FCFA</span>
+              </div>
+              <p class="card-text text-muted flex-grow-1">
+                Onctueux ragoût à base de pâte d'arachide artisanale, mijoté avec de la viande tendre de bœuf et des légumes de saison.
+              </p>
             </div>
-
+          </div>
         </div>
-    </section>
-    <!-- FOOTER -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row align-items-center text-center">
+      </div>
+    </div>
+  </section>
 
-                <!-- COPYRIGHT -->
-                <div class="col-12 col-md-6 mb-3 mb-md-0">
-                    <p class="mb-0">
-                        &copy; 2026 Le Teranga. Tous droits réservés.
-                    </p>
-                </div>
-
-                <!-- RÉSEAUX SOCIAUX -->
-                <div class="col-12 col-md-6">
-                    <a href="#" class="text-white fs-4 mx-2" aria-label="Facebook">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-
-                    <a href="#" class="text-white fs-4 mx-2" aria-label="Instagram">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-
-                    <a href="#" class="text-white fs-4 mx-2" aria-label="WhatsApp">
-                        <i class="bi bi-whatsapp"></i>
-                    </a>
-                </div>
-
+  <!-- 4. SECTION À PROPOS DE NOUS (GRILLE 2 COLONNES) -->
+  <section class="py-5" id="apropos">
+    <div class="container py-4">
+      <div class="row g-5 align-items-center">
+        <!-- Colonne Image -->
+        <div class="col-12 col-md-6">
+          <div class="position-relative">
+            <img src="images /àpropos.jpg" class="img-fluid rounded-4 shadow-lg" alt="Intérieur du restaurant Le Teranga">
+            <div class="experience-badge bg-brand text-white p-3 rounded-3 text-center shadow d-none d-sm-block">
+              <span class="h3 fw-bold brand-font d-block mb-0">100%</span>
+              <small>Authentique</small>
             </div>
+          </div>
         </div>
-    </footer>
 
+        <!-- Colonne Texte -->
+        <div class="col-12 col-md-6">
+          <span class="text-accent fw-bold text-uppercase tracking-wider">Notre Histoire</span>
+          <h2 class="display-6 fw-bold brand-font text-brand my-2">La passion du partage et du goût</h2>
+          <p class="text-muted leading-relaxed">
+            Le mot « Teranga » incarne la valeur fondamentale du Sénégal : l'hospitalité chaleureuse et la générosité envers chaque invité. Au restaurant <strong>Le Teranga</strong>, nous mettons un point d'honneur à vous faire vivre cette expérience culturelle unique.
+          </p>
+          <p class="text-muted leading-relaxed">
+            Nos chefs sélectionnent rigoureusement les meilleurs ingrédients locaux pour concocter des spécialités sénégalaises transmises de génération en génération, tout en vous accueillant dans un cadre moderne et convivial.
+          </p>
+          <div class="d-flex gap-4 mt-4">
+            <div>
+              <h4 class="fw-bold text-brand mb-0 brand-font">15+</h4>
+              <small class="text-muted">Ans de tradition</small>
+            </div>
+            <div class="border-start ps-4">
+              <h4 class="fw-bold text-brand mb-0 brand-font">4.9/5</h4>
+              <small class="text-muted">Avis clients</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SECTION CONTACT -->
+  <section class="py-5 bg-light" id="contact">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="display-6 fw-bold brand-font text-brand">Réservez une Table</h2>
+        <p class="text-muted">Une question ou une demande particulière ? Écrivez-nous directement.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <form class="card p-4 p-md-5 border-0 shadow-sm rounded-4">
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label for="nom" class="form-label fw-semibold">Nom complet</label>
+                <input type="text" class="form-control form-control-lg fs-6" id="nom" placeholder="Votre nom" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="email" class="form-label fw-semibold">Adresse Email</label>
+                <input type="email" class="form-control form-control-lg fs-6" id="email" placeholder="nom@exemple.com" required>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label fw-semibold">Message</label>
+                <textarea class="form-control fs-6" id="message" rows="5" placeholder="Votre message ou détails de réservation..." required></textarea>
+              </div>
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-brand btn-lg rounded-pill w-100 fw-bold shadow-sm">
+                  <i class="bi bi-send-fill me-2"></i>Envoyer le message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FOOTER -->
+  <footer class="bg-dark text-white py-4 border-top border-secondary">
+    <div class="container">
+      <div class="row gy-3 align-items-center">
+        <!-- Droits d'auteur -->
+        <div class="col-12 col-md-6 text-center text-md-start">
+          <p class="mb-0 text-white-50 small">
+            &copy; 2026 <strong>Le Teranga</strong>. Tous droits réservés.
+          </p>
+        </div>
+        
+        <!-- Icônes Médias Sociaux -->
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <div class="d-flex justify-content-center justify-content-md-end gap-3">
+            <a href="#" class="social-icon"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-whatsapp fs-5"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

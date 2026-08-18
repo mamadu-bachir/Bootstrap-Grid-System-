@@ -1,1 +1,196 @@
+/* ==========================================================================
+   1. VARIABLES, BASE ET TYPOGRAPHIE RESPONSIVE
+   ========================================================================== */
+:root {
+  --bs-primary: #0284c7;       /* Bleu Océan */
+  --bs-primary-hover: #0369a1;
+  --bs-warning: #f59e0b;       /* Sable / Soleil */
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+}
 
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-muted);
+  overflow-x: hidden;
+}
+
+/* Titres adaptatifs */
+h1, .display-4 {
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+}
+
+h2, .display-6 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.section-title {
+  color: var(--text-dark);
+}
+
+/* ==========================================================================
+   2. NAVBAR
+   ========================================================================== */
+.navbar {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--bs-primary) !important;
+}
+
+/* ==========================================================================
+   3. JUMBOTRON / HERO (ACCUEIL)
+   ========================================================================== */
+.hero-jumbotron {
+  min-height: 80vh;
+  padding: 4rem 1rem;
+  background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
+              url('images/hero.jpg') center/cover no-repeat ;
+  background-color:#ffffff;
+}
+
+.jumbotron-box {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-title {
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================================================================
+   4. DESTINATIONS & CARTES
+   ========================================================================== */
+.destination-card {
+  height: 260px;
+  cursor: pointer;
+}
+
+.destination-card img {
+  transition: transform 0.5s ease;
+}
+
+.destination-card:hover img {
+  transform: scale(1.08);
+}
+
+.destination-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.2) 60%, transparent 100%);
+}
+
+.travel-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.travel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   5. FORMULAIRES & BOUTONS
+   ========================================================================== */
+.form-control:focus, 
+.form-select:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(2, 132, 199, 0.25);
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--bs-primary-hover);
+  border-color: var(--bs-primary-hover);
+}
+
+/* ==========================================================================
+   6. MEDIA QUERIES (RÉACTIVITÉ TOUS ÉCRANS)
+   ========================================================================== */
+
+/* 📱 Mobiles Étroits (Moins de 576px) */
+@media (max-width: 575.98px) {
+  .hero-jumbotron {
+    min-height: 70vh;
+    padding: 2.5rem 0.5rem;
+  }
+
+  .jumbotron-box {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .destination-card {
+    height: 220px;
+  }
+
+  .hero-jumbotron .btn {
+    width: 100%;
+  }
+}
+
+/* 📱 Mobiles Larges & Tablettes Portrait (576px à 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .destination-card {
+    height: 240px;
+  }
+}
+
+/* 💻 Tablettes Paysage & Petits Laptops (768px à 991.98px) */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+  }
+}
+
+/* 💻 Écrans Larges et Laptops (992px et plus) */
+@media (min-width: 992px) {
+  .hero-jumbotron {
+    min-height: 85vh;
+  }
+
+  .destination-card {
+    height: 300px;
+  }
+
+  .card-img-top {
+    height: 220px;
+  }
+}
+
+/* 🖥️ Très Grands Écrans (1400px et plus) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+  
+  .destination-card {
+    height: 340px;
+  }
+}
